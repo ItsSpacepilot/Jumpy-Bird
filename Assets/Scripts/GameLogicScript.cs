@@ -10,9 +10,9 @@ public class GameLogicScript : MonoBehaviour
     private int score = 0;
 
     [ContextMenu("Add SCORE")]
-    public void AddScore()
+    public void AddScore(int scoreToAdd)
     {
-        score += 1;
+        score += scoreToAdd;
         scoreText.text = $"{score}";
     }
     
