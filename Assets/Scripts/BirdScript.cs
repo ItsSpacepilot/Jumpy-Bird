@@ -7,6 +7,8 @@ public class BirdScript : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D birdRigidbody;
     [SerializeField] private float flapStrenght = 10;
+    [SerializeField] private AudioClip flappSoundEffect;
+    [SerializeField] private AudioClip deathSoundEffect;
     private GameLogicScript logic;
     private bool isAlive = true;
 
@@ -22,12 +24,14 @@ public class BirdScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isAlive)
         {
+            SoundEffectManagerScript.intance.PlaySoundEffect(flappSoundEffect, transform, 1f);
             birdRigidbody.velocity = Vector2.up * flapStrenght;
         }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isAlive = false;
+        SoundEffectManagerScript.intance.PlaySoundEffect(deathSoundEffect, transform, 1f);
         logic.GameOver();
     }
 }
