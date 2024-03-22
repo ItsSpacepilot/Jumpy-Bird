@@ -28,10 +28,14 @@ public class BirdScript : MonoBehaviour
             birdRigidbody.velocity = Vector2.up * flapStrenght;
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void Death()
     {
         isAlive = false;
         SoundEffectManagerScript.intance.PlaySoundEffect(deathSoundEffect, transform, 1f);
         logic.GameOver();
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Death();
     }
 }
