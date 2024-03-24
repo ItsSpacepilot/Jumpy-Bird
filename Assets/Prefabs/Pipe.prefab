@@ -463,3 +463,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7107b89cd39cb60469b4a6ff37a2e60d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pipeScore: 1
+  scoreAudioClip: {fileID: 8300000, guid: d4f89e93548dd194e8170bec0a437947, type: 3}
