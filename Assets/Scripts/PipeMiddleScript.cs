@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PipeMiddleScript : MonoBehaviour
 {
+    [SerializeField] private int pipeScore = 1;
     private GameLogicScript logic;
 
     private void Start()
@@ -14,7 +15,7 @@ public class PipeMiddleScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 3)
         {
-            logic.AddScore(1);
+            logic.AddScore(pipeScore);
         }
     }
 }
