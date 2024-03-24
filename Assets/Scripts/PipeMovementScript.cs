@@ -21,7 +21,6 @@ public class PipeMovementScript : MonoBehaviour
         if (transform.position.x < deadZone)
         {
             Destroy(gameObject);
-            Debug.Log("Pipe destroyed");
         }
     }
 }
