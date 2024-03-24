@@ -234,6 +234,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   birdRigidbody: {fileID: 322276617}
   flapStrenght: 6
+  deadZone: 10
   flappSoundEffect: {fileID: 8300000, guid: 60ef7f62c322d7443810dbb1529f6fd1, type: 3}
   deathSoundEffect: {fileID: 8300000, guid: 1476ae95b4ff06e41ab7929e2b34108c, type: 3}
 --- !u!1 &489547847

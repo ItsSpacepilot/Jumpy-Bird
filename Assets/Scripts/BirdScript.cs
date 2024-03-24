@@ -7,6 +7,7 @@ public class BirdScript : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D birdRigidbody;
     [SerializeField] private float flapStrenght = 10;
+    [SerializeField] private float deadZone = 10; // this value is highest y position that bird can go.
     [SerializeField] private AudioClip flappSoundEffect;
     [SerializeField] private AudioClip deathSoundEffect;
     private GameLogicScript logic;
@@ -18,6 +19,10 @@ public class BirdScript : MonoBehaviour
     }
     private void Update()
     {
+        if (transform.position.y >= deadZone || transform.position.y <= -deadZone)
+        {
+            Death();
+        }
         Flap();
     }
     private void Flap()
@@ -31,11 +36,11 @@ public class BirdScript : MonoBehaviour
     private void Death()
     {
         isAlive = false;
-        SoundEffectManagerScript.intance.PlaySoundEffect(deathSoundEffect, transform, 1f);
         logic.GameOver();
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        SoundEffectManagerScript.intance.PlaySoundEffect(deathSoundEffect, transform, 1f);
         Death();
     }
 }
