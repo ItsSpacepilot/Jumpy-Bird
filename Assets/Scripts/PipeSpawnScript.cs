@@ -8,9 +8,11 @@ public class PipeSpawnScript : MonoBehaviour
     [SerializeField] private float spawnRate = 4;
     [SerializeField] private float hightOffset = 10;
     private float timer = 0;
+    private GameLogicScript logic;
 
     private void Start()
     {
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<GameLogicScript>();
         SpawnPipe();
     }
     private void Update()
@@ -27,12 +29,15 @@ public class PipeSpawnScript : MonoBehaviour
     }
     private void SpawnPipe()
     {
-        float highestPoint = transform.position.y + hightOffset;
-        float lowestPoint = transform.position.y - hightOffset;
+        if (!logic.isGameOver)
+        {
+            float highestPoint = transform.position.y + hightOffset;
+            float lowestPoint = transform.position.y - hightOffset;
 
-        Vector3 spawnPosition = new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0);
-        
+            Vector3 spawnPosition = new Vector3(transform.position.x, Random.Range(lowestPoint, highestPoint), 0);
 
-        Instantiate(pipePrefab, spawnPosition, transform.rotation);
+
+            Instantiate(pipePrefab, spawnPosition, transform.rotation);
+        }
     }
 }

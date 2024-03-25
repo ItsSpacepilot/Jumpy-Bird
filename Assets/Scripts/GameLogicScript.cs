@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameLogicScript : MonoBehaviour
 {
+    public bool isGameOver = false;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private GameObject gameoverScreen;
     private int score = 0;
@@ -13,9 +14,12 @@ public class GameLogicScript : MonoBehaviour
     [ContextMenu("Add SCORE")]
     public void AddScore(int scoreToAdd, AudioClip scoreAudioclip)
     {
-        score += scoreToAdd;
-        SoundEffectManagerScript.intance.PlaySoundEffect(scoreAudioclip, transform, 1f);
-        scoreText.text = $"{score}";
+        if (!isGameOver)
+        {
+            score += scoreToAdd;
+            SoundEffectManagerScript.intance.PlaySoundEffect(scoreAudioclip, transform, 1f);
+            scoreText.text = $"{score}";
+        }
     }
     public void Restart()
     {
@@ -24,5 +28,6 @@ public class GameLogicScript : MonoBehaviour
     public void GameOver()
     {
         gameoverScreen.SetActive(true);
+        isGameOver = true;
     }
 }

@@ -237,6 +237,7 @@ MonoBehaviour:
   deadZone: 10
   flappSoundEffect: {fileID: 8300000, guid: 60ef7f62c322d7443810dbb1529f6fd1, type: 3}
   deathSoundEffect: {fileID: 8300000, guid: 1476ae95b4ff06e41ab7929e2b34108c, type: 3}
+  birdAnimation: {fileID: 0}
 --- !u!1 &489547847
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,6 +896,7 @@ GameObject:
   - component: {fileID: 1205220758}
   - component: {fileID: 1205220760}
   - component: {fileID: 1205220759}
+  - component: {fileID: 1205220761}
   m_Layer: 0
   m_Name: Cloud Particle System
   m_TagString: Untagged
@@ -4766,7 +4768,8 @@ ParticleSystem:
     exit: 0
     colliderQueryMode: 0
     radiusScale: 1
-    primitives: []
+    primitives:
+    - {fileID: 1997856712}
   SubModule:
     serializedVersion: 2
     enabled: 0
@@ -5714,6 +5717,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &1205220761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205220757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9afb69c230c808341b5766ca39683712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cloudParticleSystem: {fileID: 0}
 --- !u!1 &1569683800
 GameObject:
   m_ObjectHideFlags: 0
@@ -6154,6 +6170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee81348aee49d904484e61192019cf60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGameOver: 0
   scoreText: {fileID: 489547849}
   gameoverScreen: {fileID: 946167108}
 --- !u!1660057539 &9223372036854775807

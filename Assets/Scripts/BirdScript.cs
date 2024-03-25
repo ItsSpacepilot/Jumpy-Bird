@@ -36,6 +36,7 @@ public class BirdScript : MonoBehaviour
     private void Death()
     {
         isAlive = false;
+        birdRigidbody.bodyType = RigidbodyType2D.Static;
         logic.GameOver();
     }
     private void OnCollisionEnter2D(Collision2D collision)
