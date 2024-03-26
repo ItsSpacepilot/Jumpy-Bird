@@ -32,9 +32,6 @@ public class BirdScript : MonoBehaviour
             SoundEffectManagerScript.intance.PlaySoundEffect(flappSoundEffect, transform, 1f);
             birdRigidbody.velocity = Vector2.up * flapStrenght;
         }
-        
-        Vector3 flappRotation = new Vector3(0, 0, birdRigidbody.velocity.y * 0.5f);
-        transform.eulerAngles = flappRotation;
     }
     private void Death()
     {
