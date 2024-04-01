@@ -787,7 +787,7 @@ GameObject:
   - component: {fileID: 397819042}
   - component: {fileID: 397819041}
   m_Layer: 5
-  m_Name: Resume Botton Text
+  m_Name: Resume Button Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2484,7 +2484,7 @@ GameObject:
   - component: {fileID: 1090447907}
   - component: {fileID: 1090447906}
   m_Layer: 5
-  m_Name: Resume Botton
+  m_Name: Resume Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2554,9 +2554,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1997856713}
-        m_TargetAssemblyTypeName: GameLogicScript, Assembly-CSharp
-        m_MethodName: Restart
+      - m_Target: {fileID: 1512082360}
+        m_TargetAssemblyTypeName: PauseManagerScript, Assembly-CSharp
+        m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7948,7 +7948,7 @@ GameObject:
   - component: {fileID: 1571657177}
   - component: {fileID: 1571657176}
   m_Layer: 5
-  m_Name: Replay Botton
+  m_Name: Replay Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8312,7 +8312,7 @@ GameObject:
   - component: {fileID: 1653707572}
   - component: {fileID: 1653707571}
   m_Layer: 5
-  m_Name: Exit Botton Text
+  m_Name: Exit Button Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8447,7 +8447,7 @@ GameObject:
   - component: {fileID: 1770999503}
   - component: {fileID: 1770999502}
   m_Layer: 5
-  m_Name: Exit Botton
+  m_Name: Exit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8615,7 +8615,7 @@ GameObject:
   - component: {fileID: 1797269361}
   - component: {fileID: 1797269360}
   m_Layer: 5
-  m_Name: Replay Botton Text
+  m_Name: Replay Button Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
