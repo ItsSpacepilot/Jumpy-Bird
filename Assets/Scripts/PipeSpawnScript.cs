@@ -29,7 +29,7 @@ public class PipeSpawnScript : MonoBehaviour
     }
     private void SpawnPipe()
     {
-        if (!logic.isGameOver)
+        if (logic.isGameOnGoing)
         {
             float highestPoint = transform.position.y + hightOffset;
             float lowestPoint = transform.position.y - hightOffset;

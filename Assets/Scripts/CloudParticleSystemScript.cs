@@ -14,9 +14,9 @@ public class CloudParticleSystemScript : MonoBehaviour
     }
     private void Update()
     {
-        if (logic.isGameOver)
-        {
-            cloudParticleSystem.Pause();
-        }
+        // if (!logic.isGameOnGoing)
+        // {
+        //     cloudParticleSystem.Pause();
+        // }
     }
 }

@@ -19,7 +19,7 @@ public class PipeMovementScript : MonoBehaviour
     }
     private void MovePipe()
     {
-        if (!logic.isGameOver)
+        if (logic.isGameOnGoing)
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
         }
