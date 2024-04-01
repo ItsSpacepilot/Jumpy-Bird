@@ -10,13 +10,8 @@ public class BirdScript : MonoBehaviour
     [SerializeField] private float deadZone = 10; // this value is highest y position that bird can go.
     [SerializeField] private AudioClip flappSoundEffect;
     [SerializeField] private AudioClip deathSoundEffect;
-    private GameLogicScript logic;
     private bool isAlive = true;
 
-    private void Start()
-    {
-        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<GameLogicScript>();
-    }
     private void Update()
     {
         if (transform.position.y >= deadZone || transform.position.y <= -deadZone)

@@ -6,19 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class GameLogicScript : MonoBehaviour
 {
-    public bool isGameOnGoing = true;
     [SerializeField] private TextMeshProUGUI scoreText;
     private int score = 0;
 
     [ContextMenu("Add SCORE")]
     public void AddScore(int scoreToAdd, AudioClip scoreAudioclip)
     {
-        if (isGameOnGoing)
-        {
-            score += scoreToAdd;
-            SoundEffectManagerScript.intance.PlaySoundEffect(scoreAudioclip, transform, 1f);
-            scoreText.text = $"{score}";
-        }
+        score += scoreToAdd;
+        SoundEffectManagerScript.intance.PlaySoundEffect(scoreAudioclip, transform, 1f);
+        scoreText.text = $"{score}";
     }
     public void Restart()
     {

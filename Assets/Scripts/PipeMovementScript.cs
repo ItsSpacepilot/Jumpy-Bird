@@ -6,12 +6,6 @@ public class PipeMovementScript : MonoBehaviour
 {
     [SerializeField] private float speed = 5;
     [SerializeField] private float deadZone = -15;
-    private GameLogicScript logic;
-
-    private void Start()
-    {
-        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<GameLogicScript>();
-    }
     private void Update()
     {
         MovePipe();
@@ -19,10 +13,7 @@ public class PipeMovementScript : MonoBehaviour
     }
     private void MovePipe()
     {
-        if (logic.isGameOnGoing)
-        {
-            transform.position += Vector3.left * speed * Time.deltaTime;
-        }
+        transform.position += Vector3.left * speed * Time.deltaTime;
     }
     private void DestroyPipe()
     {
